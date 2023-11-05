@@ -80,7 +80,7 @@ const createTags = (custom = false) =>{
 
     if(custom === true && (name ==="" || date ==="" || time ==="" || address ==="")){
         alert("Todos los campos son obligatorios, no pueden quedar en blanco.");
-        return
+        
     }
     
     const datetimeFormated = formatDate(date,time)
@@ -120,6 +120,6 @@ const formatDate = (date,time) =>{
     const datetimeFusion = date+"T"+time
     const datatime = new Date(datetimeFusion);
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'};
-    return datatime.toLocaleString('es-AR', options) + " | " + time + " Horas";
+    return date === "" ? "custom-datetime" : datatime.toLocaleString('es-AR', options) + " | " + time + " Horas";
 
 }

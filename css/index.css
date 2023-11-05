@@ -25,6 +25,7 @@ header{
 .container{
     background-color: #002642;
     width: 90%;
+    max-width: 1024px;
     height: 670px;
     display: flex;
     flex-direction: row;

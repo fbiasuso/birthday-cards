@@ -1,0 +1,62 @@
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:2px;
+    background-color: #fde698;
+    background-image: url('../img/diseño2.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 400px;
+    height: 290px;
+    padding: 32px 120px 32px 32px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    border: 2px solid #E5DADA;
+}
+
+#line1{
+    font-size: 16px;
+    letter-spacing: 4px;
+    color:#ff184e;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px black;
+
+}
+#line2{
+    font-size: 20px;
+    color: #facf5b;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px black;
+}
+#line3{
+    padding: 0 13px;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: #02040F;
+    
+}
+#line4{
+    font-size: 12px;
+    color: #02040F;
+    
+    
+}
+#line5{
+    font-size: 18px;
+    text-transform: uppercase;
+    color:#ff184e;
+    text-shadow: 0px 1px 0px black;
+    
+}
+#line6{
+    font-size: 14px;
+    color:#05a6d7;
+    text-transform: capitalize;
+    text-shadow: 0px 1px 0px black;
+    
+}

@@ -1,0 +1,64 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Allison&family=Roboto:wght@100;300;500&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    /* gap:20px; */
+    background-color: #280032;
+    background-image: url("../img/diseño3.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 335px;
+    height: 594px;
+    padding: 242px 32px 32px 32px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+    border: 2px solid #E5DADA;
+}
+
+#line1{
+    margin-bottom: -20px;
+    font-size: 16px;
+    color:white;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px -1px 10px black;
+
+}
+#line2{
+    font-size: 100px;
+    color: #FFDF2B;
+    text-transform: capitalize;
+    font-family: 'Allison', cursive;
+    text-shadow: 0px -1px 10px #f3e280;
+}
+#line3{
+    color:white;
+    margin-top: 5px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px -1px 10px black;
+}
+#line4{
+    margin-top: 20px;
+    color:white;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0px -1px 10px black;
+}
+#line5{
+    margin-top: 90px;
+    color: #FFDF2B;
+    font-size: 30px;
+    text-transform: capitalize;
+    font-family: 'Allison', cursive;
+    text-shadow: 0px -1px 10px #f3e280;
+    
+    
+}

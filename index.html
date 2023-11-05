@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <link id="styles-card" rel="stylesheet" href="./css/card1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Tarjeta de Cumpleaños</title>
+</head>
+<body>
+    <header>
+        <h1>ROLLING CARDS</h1>
+        <h2>Tarjetas de Cumpleaños Personalizadas</h2>
+    </header>
+    <main id="main">
+        <article class="container">
+            <section id="card-info">
+                <form class="card-form" onsubmit="event.preventDefault();">
+                    <label for="name"> Nombre: </label>
+                    <input type="text" id="name" required>
+                    <label for="name"> Fecha: </label>
+                    <input type="date" id="date" required>
+                    <label for="name"> Hora: </label>
+                    <input type="time" id="time" required>
+                    <label for="name"> Dirección: </label>
+                    <input type="text" id="address" required>
+                    <button class="btn" type="submit" onclick="createCard()">Crear Tarjeta</button>
+                </form>
+            </section>   
+            <section id="card-design">
+                <article class="card-preview">
+                    <div class="design-btn">
+                        <button class="design-buttons" type="button" onclick="cardStyles(0)">Diseño 1</button>
+                        <button class="design-buttons" type="button" onclick="cardStyles(1)">Diseño 2</button>
+                        <button class="design-buttons" type="button" onclick="cardStyles(2)">Diseño 3</button>
+                    </div>
+                    <div id="card-body" class="default">
+                        <p>ELIJA UN DISEÑO DE TARJETA</p>
+                    </div>
+                </article>   
+            </section>
+        </article>
+    </main>
+<script src="./js/index.js"></script>           
+</body>
+</html>

@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #02040F;
+    color:#E5DADA;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    text-align: center;
+    padding-top: 15px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin:auto;
+
+}
+
+.container{
+    background-color: #002642;
+    width: 90%;
+    height: 670px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+
+#card-info{
+    /* margin: auto; */
+    width: 50%;
+    max-width: 450px;
+    /* border-right-color: linear-gradient(180deg, rgba(229,218,218,0.227328431372549) 0%, rgba(229,218,218,1) 20%, rgba(229,218,218,1) 80%, rgba(229,218,218,0.4009978991596639) 100%); */
+    /* border-image: linear-gradient(to bottom, red, rgba(0, 0, 0, 0)) 1 100%; */
+    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #E5DADA, rgba(0, 0, 0, 0)) 1 100%;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.card-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    /* gap: 15px */
+}
+
+.card-form input{
+    background-color: #E5DADA;
+    width: 80%;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    margin-top: 5px;
+}
+
+.card-form input:focus{
+    color: #495057;
+    border-style: solid;
+    border-color: rgb(255 199 0);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 199, 0, 0.489);
+
+}
+
+.btn{
+    background-color: #e59500;
+    margin: 15px auto;
+    padding: 8px 15px;
+    width: 50%;
+    text-align: center;
+    color:#002642;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#card-design{
+    width: 50%;
+    /* margin: auto; */
+    max-width: 500px;
+}
+
+.card-preview{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-bottom: 4px;
+}
+
+.design-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: space-between;
+    width: 70%;
+    margin-bottom: 5px;
+
+}
+.design-buttons{
+    background-color: #e59500;
+    margin: 0 auto;
+    padding: 8px 15px;
+    width: 50%;
+    text-align: center;
+    color:#002642;
+}
+
+.default{
+    background-color: #E5DADA;
+    color:#840032;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 500px;
+    font-size: 20px;
+    transition: all 0.3s ease-in;
+}

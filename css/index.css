@@ -135,11 +135,11 @@ header{
     .container{
         width: 70%;
         max-width: 1024px;
-        /* height: 1024px; */ 
+        height: fit-content;  
         display: flex;
-        flex-direction:column;
+        flex-direction:column-reverse;
         border-radius: 20px;
-        padding: 10px 0;
+        padding: 50px 0;
     }
     
     #card-info {
@@ -148,10 +148,12 @@ header{
         border-bottom-style: solid;
         border-bottom-width: 1px;
         border-right-width: 0;
+        
     }
 
     #card-design{
         width:100%;
+        margin-bottom: 30px;
     }
 
 }

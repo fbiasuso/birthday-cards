@@ -1,36 +1,64 @@
 const cardsProperties = [
     [ 
-        {"line1":"h3","line2":"h2","line3":"p","line4":"h2","line5":"p","line6":"p"},
-        { "line1":"¡ACOMPAÑANOS!",
-        "line2":"¡ES UNA SORPRESA!",
-        "line3":"Estamos organizando una fiesta sorpresa para",
-        "line4":"custom-name",
-        "line5":"custom-datetime",
-        "line6":"custom-address"
+        {   
+            line1:"h3",
+            line2:"h2",
+            line3:"p",
+            line4:"h2",
+            line5:"p",
+            line6:"p"
         },
-        {"style":"card1"}
+        {  
+            line1:"¡ACOMPAÑANOS!",
+            line2:"¡ES UNA SORPRESA!",
+            line3:"Estamos organizando una fiesta sorpresa para",
+            line4:"custom-name",
+            line5:"custom-datetime",
+            line6:"custom-address"
+        },
+        {   
+            style:"card1"
+        }
 
     ],
     [
-        {"line1":"h2","line2":"h2","line3":"p","line4":"p","line5":"h2","line6":"h3"},
-        { "line1":"TE INVITO A",
-        "line2":"MI FIESTA DE CUMPLEAÑOS",
-        "line3":"custom-datetime",
-        "line4":"custom-address",
-        "line5":"¡NO FALTES!",
-        "line6":"custom-name"
+        {   
+            line1:"h2",
+            line2:"h2",
+            line3:"p",
+            line4:"p",
+            line5:"h2",
+            line6:"h3"
         },
-        {"style":"card2"}
+        {   line1:"TE INVITO A",
+            line2:"MI FIESTA DE CUMPLEAÑOS",
+            line3:"custom-datetime",
+            line4:"custom-address",
+            line5:"¡NO FALTES!",
+            line6:"custom-name"
+        },
+        {  
+            style:"card2"
+        }
     ],
     [
-        {"line1":"p","line2":"p","line3":"p","line4":"p","line5":"p"},
-        { "line1":"TE INVITO A MI FIESTA DE",
-        "line2":"Cumpleaños",
-        "line3":"custom-datetime",
-        "line4":"custom-address",
-        "line5":"custom-name",
+        {
+            line1:"p",
+            line2:"p",
+            line3:"p",
+            line4:"p",
+            line5:"p"
         },
-        {"style":"card3"}
+        {   
+            line1:"TE INVITO A MI FIESTA DE",
+            line2:"Cumpleaños",
+            line3:"custom-datetime",
+            line4:"custom-address",
+            line5:"custom-name",
+        },
+        {
+            style:"card3"
+        }
     ]
 ];
 let cardId;

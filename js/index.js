@@ -62,16 +62,21 @@ const cardsProperties = {
                                     }
                         };
 let cardId;
-const cardBody = document.getElementById('card-body');
+localStorage.setItem("cardId", JSON.stringify(cardId))
+let data = {};
+localStorage.setItem("data", JSON.stringify(data))
 
+const cardBody = document.getElementById('card-body');
 
 const cardStyles = (design) =>{
 
-    cardId = design;
- 
+    //cardId = design;
+    localStorage.setItem("cardId", JSON.stringify(design))
+    cardId = JSON.parse(localStorage.getItem("cardId"));
+    
     killChildren();
 
-    const styleFileNameNew = cardsProperties[design].style
+    const styleFileNameNew = cardsProperties[cardId].style
     const styleFileNameOld = document.getElementById('styles-card');
     styleFileNameOld.href = "./css/"+styleFileNameNew+".css" 
     cardBody.className === "default" && (cardBody.className = "card-body");
@@ -100,17 +105,33 @@ const killChildren = () =>{
 
 const createTags = (custom = false) =>{
     
-    const name = document.getElementById('name').value;
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
-    const address = document.getElementById('address').value;
-
-    if(custom && (!name || !date || !time || !address)){
-        alert("Todos los campos son obligatorios, no pueden quedar en blanco.");
+    
+    let name, date, time, address, datetimeFormated;
+    form = JSON.parse(localStorage.getItem("data"));
+    
+    const isEmpty = Object.values(form).some(values => (!values))
+    const hasItems = Object.keys(form).length;
+    if( hasItems && !isEmpty){
+        name = form.name;
+        datetimeFormated = form.datatime;
+        address = form.address;
+    }else{
+        name = document.getElementById('name').value;
+        date = document.getElementById('date').value;
+        time = document.getElementById('time').value;
+        address = document.getElementById('address').value;
+        datetimeFormated = (date && time) ? formatDate(date,time) : "";
+        /* datetimeFormated = (date && time) || formatDate(date,time); */
+        form.name = name;
+        form.datatime = datetimeFormated;
+        form.address = address;
+        localStorage.setItem("data", JSON.stringify(form))
     }
     
-    const datetimeFormated = formatDate(date,time)
-    
+    if(custom && (!name || !datetimeFormated || !address)){
+        alert("Todos los campos son obligatorios, no pueden quedar en blanco.");
+    }
+        
     const arrayTagsValues = Object.values(cardsProperties[cardId].tags)
     const arrayTagsKeys = Object.keys(cardsProperties[cardId].tags)
     const arrayTextValues = Object.values(cardsProperties[cardId].text)
@@ -123,13 +144,13 @@ const createTags = (custom = false) =>{
         
         switch (arrayTextValues[index]) {
             case "custom-name":
-                tagContent = (name && custom) ? document.createTextNode(name) : document.createTextNode(arrayTextValues[index]); 
+                tagContent = (name) ? document.createTextNode(name) : document.createTextNode(arrayTextValues[index]); 
                 break;
             case "custom-datetime":
-                tagContent = (datetimeFormated && custom) ? document.createTextNode(datetimeFormated) : document.createTextNode(arrayTextValues[index]); 
+                tagContent = (datetimeFormated) ? document.createTextNode(datetimeFormated) : document.createTextNode(arrayTextValues[index]); 
                 break;
             case "custom-address":
-                tagContent = (address && custom) ? document.createTextNode(address) : document.createTextNode(arrayTextValues[index]); 
+                tagContent = (address) ? document.createTextNode(address) : document.createTextNode(arrayTextValues[index]); 
                 break;
             default:
                 tagContent = document.createTextNode(arrayTextValues[index]); 
